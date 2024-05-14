@@ -1,0 +1,47 @@
+{
+  "name": "movix",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "esbuild src/index.js --bundle --outfile=public/assets/app.js --loader:.js=jsx",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
+    "axios": "^1.2.2",
+    "dayjs": "^1.11.7",
+    "react": "^18.2.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.7.1",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-lazy-load-image-component": "^1.5.6",
+    "react-player": "^2.11.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.6.2",
+    "react-select": "^5.7.0",
+    "sass": "^1.57.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "babel-jest": "^29.6.2",
+    "esbuild": "^0.20.2",
+    "jest": "^29.6.2",
+    "vite": "^4.0.0"
+  },
+  "jest": {
+    "projects": [
+      "src/client/jest.config.js",
+      "src/server/unit.jest.config.js",
+      "src/server/int.jest.config.js"
+    ]
+  }
+}
